@@ -1,0 +1,151 @@
+<html>
+   <head>
+       <title>Insert title here</title>
+
+       <script type="text/javaScript">      
+      
+           function validate()
+           {
+               var a=true;
+
+               var re=/^[A-Za-z]+$/              
+               if (document.f1.fn.value.search(re)==-1)
+               {
+                  alert("properly enter your firstname");
+                  a=false;
+               }
+
+               var re=/^[A-Za-z]+$/              
+               if (document.f1.ln.value.search(re)==-1)
+               {
+                  alert("properly enter your lastname");
+                  a=false;
+               }
+
+               var re=/^([A-Za-z]|\s)+$/              
+               if (document.f1.cn.value.search(re)==-1)
+               {
+                  alert("properly enter your Company");
+                  a=false;
+               }
+
+               var re=/^([A-Za-z0-9]|\s)+$/              
+               if (document.f1.ad1.value.search(re)==-1)
+               {
+                  alert("properly enter your address1");
+                  a=false;
+               }
+
+               var re=/^([A-Za-z0-9]|\s)+$/              
+               if (document.f1.ad2.value.search(re)==-1)
+               {
+                  alert("properly enter your address2");
+                  a=false;
+               }
+
+               var re=/^\d+$/              
+               if (document.f1.zp.value.search(re)==-1)
+               {
+                  alert("properly enter your zip code");
+                  a=false;
+               }
+  
+               var re=/^([A-Za-z]|\s)+$/              
+               if (document.f1.ct.value.search(re)==-1)
+               {
+                  alert("properly enter your city");
+                  a=false;
+               }
+                 
+          
+               if ( document.f1.st.selectedIndex == 0 )
+               {
+               alert ( "Please select your state" );
+               a = false;
+               }
+
+               var re=/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/              
+               if (document.f1.email.value.search(re)==-1)
+               {
+                  alert("properly enter your email");
+                  a=false;
+               }          
+           return a;
+           }
+   </script>
+</head>
+<body>
+   <form name="f1" onSubmit="return validate()">
+
+       <table border="0" align="center" cellpadding="10">
+           <tr>
+               <th>FirstName<font color="red">*</font></th>
+               <th><input type="text" name="fn"></th>
+           </tr>
+          
+           <tr>
+               <th>LastName<font color="red">*</font></th>
+               <th><input type="text" name="ln"></th>
+           </tr>
+          
+           <tr>
+               <th>Company<font color="red">*</font></th>
+               <th><input type="text" name="cn"></th>
+           </tr>
+          
+           <tr>
+               <th>Address 1<font color="red">*</font></th>
+               <th><input type="text" name="ad1"></th>
+           </tr>
+          
+           <tr>
+               <th>Address 2<font color="red">*</font></th>
+               <th><input type="text" name="ad2"></th>
+           </tr>
+          
+           <tr>
+               <th>City<font color="red">*</font></th>
+               <th><input type="text" name="ct"></th>
+           </tr>
+          
+           <tr>
+               <th>State<font color="red">*</font></th>
+               <th>
+                   <select name="st" style="width:180px;">
+                       <option>Select State</option>
+                       <option value="MP">MP</option>
+                       <option value="UP">UP</option>
+                       <option value="WB">WB</option>
+                       <option value="AP">AP</option>
+                   </select>
+               </th>
+           </tr>
+          
+           <tr>
+               <th>Zip Code<font color="red">*</font></th>
+               <th><input type="text" name="zp"></th>
+           </tr>
+          
+           <tr>
+               <th>Phone</th>
+               <th><input type="text" name="ph"></th>
+           </tr>
+          
+           <tr>
+               <th>Fax</th>
+               <th><input type="text" name="fx"></th>
+           </tr>
+          
+           <tr>
+               <th>Email<font color="red">*</font></th>
+               <th><input type="text" name="email"></th>
+           </tr>
+          
+           <tr>
+               <th colspan="2"><input type="submit"></th>
+           </tr>
+          
+       </table>
+   </form>
+</body>
+</html>
